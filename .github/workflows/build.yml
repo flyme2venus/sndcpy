@@ -14,7 +14,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '17' # 推荐使用较新版本的 Java，如 17 或者根据项目需求选择
+          distribution: 'temurin' # 添加所需的 distribution 参数，例如 'temurin'
+          java-version: '17' # 根据项目需求选择合适的 Java 版本
 
       - name: Build the app
         run: |
