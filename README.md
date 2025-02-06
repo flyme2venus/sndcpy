@@ -1,10 +1,10 @@
 # 改动
-添加android:excludeFromRecents="true"以从最近任务界面隐藏
-增加workflow以使用action编译
+添加android:excludeFromRecents="true"以从最近任务界面隐藏  
+增加workflow以使用action编译  
 
 # Modifications
-Add android:excludeFromRecents="true" to exclude from the recent tasks interface.
-Integrate workflow to use actions for compilation.
+Add android:excludeFromRecents="true" to exclude from the recent tasks interface.  
+Integrate workflow to use actions for compilation.  
 
 # sndcpy (v1.1)
 
