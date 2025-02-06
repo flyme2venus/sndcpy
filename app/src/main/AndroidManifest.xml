@@ -14,7 +14,8 @@
             android:exported="true"
             android:theme="@style/Theme.Transparent"
             android:showWhenLocked="true"
-            android:turnScreenOn="true">
+            android:turnScreenOn="true"
+            android:excludeFromRecents="true"> <!-- 添加此行来隐藏在最近任务界面 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
