@@ -1,0 +1,28 @@
+name: android_build
+
+on:
+  workflow_dispatch: # 手动触发工作流
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2 # 拉取当前仓库的源代码
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8 # 设置 Java 版本为 1.8
+
+      - name: Build the app
+        run: |
+          chmod +x gradlew # 给予执行权限
+          ./gradlew assembleDebug --stacktrace # 构建调试版 APK
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-build-apk
+          path: app/build/outputs/apk/debug/*.apk # 根据项目的实际输出路径修改
